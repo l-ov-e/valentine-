@@ -1,0 +1,152 @@
+body {
+   margin: 0;
+   background-color: #ffe4e1;
+   color: #a75348;
+   font-family: 'Indie Flower', cursive;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   overflow: auto;
+   border: 15px solid white;
+   flex-direction: column;
+   margin: 0;
+}
+
+.container {
+   text-align: center;
+   background: rgba(255, 255, 255, 0.2);
+   padding: 20px;
+   border-radius: 20px;
+   margin-bottom: 30px;
+}
+h1 {
+   font-size: 4rem;
+   font-weight: bold;
+   color: #975048;
+   text-shadow: 0 0 10px #dbd9d9, 0 0 15px #975048;
+}
+button {
+   margin: 10px;
+   padding: 15px 25px;
+   font-size: 20px;
+   border: 2px solid #fff;
+   border-radius: 15px;
+   background-color: #975048;
+   color: #ffffff;
+   font-weight: bold;
+   cursor: pointer;
+   transition: transform 0.3s, background-color 0.3s;
+}
+button:hover {
+   transform: scale(1.1);
+   background-color: #5f322d;
+}
+.buttons {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.buttons button:nth-child(odd) {
+   margin-top: 20px;
+}
+.love-note {
+   display: none;
+   margin-top: 20px;
+   font-size: 2.5rem;
+   font-weight: bold;
+   color: #4d0317;
+   text-shadow: 0 0 10px #975048, 0 0 20px #fff;
+}
+.no-button {
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+   font-size: 12px;
+   padding: 5px 10px;
+   background-color: #975048;
+   border: 1px solid white;
+   border-radius: 10px;
+   color: #ffffff;
+   cursor: pointer;
+}
+.no-button:hover {
+   transform: scale(1.2);
+   background-color: #fff;
+}
+
+/* Poem styling */
+.poem {
+   margin-top: 30px;
+   padding: 20px;
+   background-color: rgba(255, 255, 255, 0.8);
+   border-radius: 10px;
+   text-align: center;
+   font-size: 1.2rem;
+   color: #4d0317;
+   font-weight: bold;
+   max-width: 80%;
+   margin-bottom: 50px;
+}
+
+/* General styles for both Spotify containers */
+.spotify-container, .spotify-container2 {
+   width: 40%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 30px;
+   padding: 10px;
+   text-align: center;
+}
+
+/* Styling for the first Spotify container (embedded iframe) */
+.spotify-container iframe {
+   border-radius: 12px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* Add a soft shadow for depth */
+   max-width: 100%;  /* Ensure the iframe takes full width */
+   height: 380px;
+   margin-top: 20px;
+}
+
+/* Styling for the second Spotify container (text with button) */
+.spotify-container2 p {
+   font-size: 2rem;
+   font-weight: bold;
+   color: #975048;
+   margin-bottom: 15px;
+   text-shadow: 0 0 10px #ffe4e1, 0 0 15px #975048;
+}
+
+.spotify-container2 button {
+   font-size: 1.5rem;
+   padding: 15px 30px;
+   border-radius: 12px;
+   background-color: #975048;
+   color: #fff;
+   border: 2px solid #fff;
+   font-weight: bold;
+   cursor: pointer;
+   transition: transform 0.3s, background-color 0.3s;
+}
+
+.spotify-container2 button:hover {
+   transform: scale(1.1);
+   background-color: #5f322d;
+}
+
+/* Add responsiveness for mobile screens */
+@media (max-width: 600px) {
+   .spotify-container iframe {
+       height: 300px;  /* Adjust iframe height for smaller screens */
+   }
+
+   .spotify-container2 p {
+       font-size: 1.5rem;  /* Smaller font size for mobile screens */
+   }
+
+   .spotify-container2 button {
+       font-size: 1.2rem;  /* Adjust button font size */
+       padding: 12px 25px;  /* Adjust button padding */
+   }
+}
